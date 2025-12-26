@@ -1,0 +1,58 @@
+export const products = [
+  {
+    id: 1,
+    name: "Executive Palazzo Set",
+    price: "₦25,000",
+    image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&h=800&fit=crop",
+    category: "Corporate",
+  },
+  {
+    id: 2,
+    name: "Ankara Blazer Dress",
+    price: "₦35,000",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=800&fit=crop",
+    category: "Ankara",
+  },
+  {
+    id: 3,
+    name: "Luxury Corset Top",
+    price: "₦18,000",
+    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=800&fit=crop",
+    category: "Corset",
+  },
+  {
+    id: 4,
+    name: "Corporate Shirt & Pants",
+    price: "₦22,000",
+    image: "https://images.unsplash.com/photo-1551803091-e20673f15770?w=600&h=800&fit=crop",
+    category: "Corporate",
+  },
+  {
+    id: 5,
+    name: "Ankara Maxi Gown",
+    price: "₦45,000",
+    image: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=600&h=800&fit=crop",
+    category: "Ankara",
+  },
+  {
+    id: 6,
+    name: "Corset Evening Dress",
+    price: "₦55,000",
+    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&fit=crop",
+    category: "Corset",
+  },
+  {
+    id: 7,
+    name: "Power Suit Collection",
+    price: "₦40,000",
+    image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=800&fit=crop",
+    category: "Corporate",
+  },
+  {
+    id: 8,
+    name: "Ankara Peplum Blouse",
+    price: "₦15,000",
+    image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&h=800&fit=crop",
+    category: "Ankara",
+  },
+];
