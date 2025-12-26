@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Phone, MapPin, Heart } from 'lucide-react';
+import { Instagram, Phone, MapPin, Heart, MessageCircle } from 'lucide-react';
+import { SiTiktok } from 'react-icons/si';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -71,6 +72,24 @@ const Footer = () => {
               >
                 <Instagram size={16} />
                 @toras_couture
+              </a>
+              <a 
+                href="https://wa.me/2348080610348" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-secondary-foreground/70 hover:text-gold transition-colors"
+              >
+                <MessageCircle size={16} />
+                08080610348
+              </a>
+              <a 
+                href="https://tiktok.com/@your_handle" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-secondary-foreground/70 hover:text-gold transition-colors"
+              >
+                <SiTiktok size={16} />
+                @your_handle
               </a>
             </div>
           </div>
