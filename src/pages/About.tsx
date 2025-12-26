@@ -75,7 +75,7 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  With a vision to redefine elegance in Nigerian fashion, Bada Tolulope founded 
+                  With a vision to redefine elegance in Nigerian fashion, Tolulope Bada founded 
                   Tora's Couture with a simple belief: every woman deserves to feel confident and 
                   beautiful in what she wears.
                 </p>
