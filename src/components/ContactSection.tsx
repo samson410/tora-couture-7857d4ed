@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Phone, MapPin, Instagram, Send } from 'lucide-react';
+import { Phone, MapPin, Instagram, Send, MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
+import { SiTiktok } from 'react-icons/si';
 import { toast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
@@ -92,6 +93,36 @@ const ContactSection = () => {
                   <div>
                     <p className="text-sm text-primary-foreground/60">Follow Us</p>
                     <p className="font-medium">@toras_couture</p>
+                  </div>
+                </a>
+
+                <a 
+                  href="https://wa.me/2348080610348" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 text-primary-foreground/90 hover:text-[hsl(51,100%,50%)] transition-colors group"
+                >
+                  <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center group-hover:bg-[hsl(51,100%,50%,0.2)] transition-colors">
+                    <MessageCircle size={20} />
+                  </div>
+                  <div>
+                    <p className="text-sm text-primary-foreground/60">WhatsApp</p>
+                    <p className="font-medium">08080610348</p>
+                  </div>
+                </a>
+
+                <a 
+                  href="https://tiktok.com/@your_handle" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 text-primary-foreground/90 hover:text-[hsl(51,100%,50%)] transition-colors group"
+                >
+                  <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center group-hover:bg-[hsl(51,100%,50%,0.2)] transition-colors">
+                    <SiTiktok size={20} />
+                  </div>
+                  <div>
+                    <p className="text-sm text-primary-foreground/60">TikTok</p>
+                    <p className="font-medium">@your_handle</p>
                   </div>
                 </a>
               </div>

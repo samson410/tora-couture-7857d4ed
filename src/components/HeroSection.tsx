@@ -23,14 +23,13 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
       {/* Content */}
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto space-y-8">
-          <p className="text-[hsl(51,100%,50%)] font-medium tracking-[0.3em] uppercase text-sm md:text-base animate-fade-up">
-            Luxury Fashion Redefined
-          </p>
-          
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground leading-tight animate-fade-up [animation-delay:200ms]">
-            Elegance
-            <span className="block italic text-[hsl(51,100%,50%)]">Is Key</span>
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground leading-tight animate-fade-up">
+            Tora Couture
           </h1>
+          
+          <p className="font-serif text-2xl md:text-4xl lg:text-5xl italic text-[hsl(51,100%,50%)] animate-fade-up [animation-delay:200ms]">
+            Elegance Is Key
+          </p>
           
           <p className="text-primary-foreground/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed animate-fade-up [animation-delay:400ms]">
             We specialize in corporate wears like palazzo, shirts, pants, and others. 
