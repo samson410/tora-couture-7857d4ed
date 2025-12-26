@@ -40,7 +40,7 @@ const About = () => {
             About Us
           </h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto animate-fade-up [animation-delay:400ms]">
-            Discover the passion and artistry behind Tora Couture
+            Discover the passion and artistry behind Tora's Couture
           </p>
         </div>
       </section>
@@ -68,20 +68,20 @@ const About = () => {
             {/* Content */}
             <div className="animate-fade-up [animation-delay:700ms]">
               <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
-                Meet Our Founder
+                Meet the C.E.O
               </p>
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Bada Tolulope
+                Tolulope Bada
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   With a vision to redefine elegance in Nigerian fashion, Bada Tolulope founded 
-                  Tora Couture with a simple belief: every woman deserves to feel confident and 
+                  Tora's Couture with a simple belief: every woman deserves to feel confident and 
                   beautiful in what she wears.
                 </p>
                 <p>
                   Her journey began with a passion for creating unique pieces that blend traditional 
-                  African aesthetics with contemporary style. Today, Tora Couture stands as a 
+                  African aesthetics with contemporary style. Today, Tora's Couture stands as a 
                   testament to her dedication to quality craftsmanship and innovative design.
                 </p>
                 <p>
