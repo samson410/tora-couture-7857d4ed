@@ -52,7 +52,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <span className="font-serif text-2xl md:text-3xl font-bold text-gradient z-100">
+          <span className="font-serif text-2xl md:text-3xl font-bold text-purple">
             Tora Couture
           </span>
         </Link>
