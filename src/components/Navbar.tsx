@@ -13,29 +13,15 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // ✅ Prevent background scroll when mobile menu is open
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isMobileMenuOpen]);
-
-  // ✅ Ignore scroll events while mobile menu is open
+  // Track scroll normally (scrolling is allowed even when menu is open)
   useEffect(() => {
     const handleScroll = () => {
-      if (isMobileMenuOpen) return;
       setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isMobileMenuOpen]);
+  }, []);
 
   const handleNavClick = (e: React.MouseEvent, sectionId: string) => {
     e.preventDefault();
@@ -60,7 +46,9 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
+        isMobileMenuOpen
+          ? 'bg-transparent py-5'
+          : isScrolled
           ? 'bg-background/95 backdrop-blur-md shadow-elegant py-3'
           : 'bg-transparent py-5'
       }`}
@@ -118,7 +106,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed inset-0 top-16 bg-background/98 backdrop-blur-lg transition-all duration-500 ${
+        className={`md:hidden fixed inset-0 z-40 bg-background/95 backdrop-blur-xl transition-all duration-500 ${
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
