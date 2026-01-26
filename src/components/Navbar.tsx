@@ -45,9 +45,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isMobileMenuOpen
-          ? 'bg-transparent py-5'
-          : isScrolled
+        isScrolled && !isMobileMenuOpen
           ? 'bg-background/95 backdrop-blur-md shadow-elegant py-3'
           : 'bg-transparent py-5'
       }`}
@@ -90,6 +88,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
           </Button>
         </div>
 
+        {/* Mobile Menu Button (CANCEL BUTTON IS HERE) */}
         <button
           className={`md:hidden p-2 ${
             isScrolled ? 'text-foreground' : 'text-primary-foreground'
@@ -100,14 +99,14 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       <div
-        className={`md:hidden fixed inset-0 z-40 bg-background/60 backdrop-blur-xl transition-none ${
-          isMobileMenuOpen ? 'block' : 'hidden'
+        className={`md:hidden fixed inset-0 z-40 bg-background/95 backdrop-blur-md transition-opacity duration-300 ${
+          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
         <div className="flex flex-col items-center justify-center gap-8 pt-20">
-          {navLinks.map((link, index) =>
+          {navLinks.map((link) =>
             link.isRoute ? (
               <Link
                 key={link.name}
@@ -127,6 +126,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
               </button>
             )
           )}
+
           <Button
             variant="hero"
             size="lg"
