@@ -13,7 +13,6 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Track scroll normally (scrolling is allowed even when menu is open)
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -54,14 +53,12 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <span className="font-serif text-2xl md:text-3xl font-bold text-purple">
             Tora Couture
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) =>
             link.isRoute ? (
@@ -93,7 +90,6 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
           </Button>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           className={`md:hidden p-2 ${
             isScrolled ? 'text-foreground' : 'text-primary-foreground'
@@ -106,8 +102,8 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed inset-0 z-40 bg-background/95 backdrop-blur-xl transition-all duration-500 ${
-          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        className={`md:hidden fixed inset-0 z-40 bg-background/60 backdrop-blur-xl transition-none ${
+          isMobileMenuOpen ? 'block' : 'hidden'
         }`}
       >
         <div className="flex flex-col items-center justify-center gap-8 pt-20">
@@ -118,7 +114,6 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
                 to={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="font-serif text-2xl text-foreground hover:text-primary transition-colors duration-300"
-                style={{ animationDelay: `${index * 100}ms` }}
               >
                 {link.name}
               </Link>
@@ -127,7 +122,6 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
                 key={link.name}
                 onClick={(e) => handleNavClick(e, link.href)}
                 className="font-serif text-2xl text-foreground hover:text-primary transition-colors duration-300"
-                style={{ animationDelay: `${index * 100}ms` }}
               >
                 {link.name}
               </button>
