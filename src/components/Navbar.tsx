@@ -13,13 +13,29 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  // ✅ Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
+  // ✅ Ignore scroll events while mobile menu is open
   useEffect(() => {
     const handleScroll = () => {
+      if (isMobileMenuOpen) return;
       setIsScrolled(window.scrollY > 20);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMobileMenuOpen]);
 
   const handleNavClick = (e: React.MouseEvent, sectionId: string) => {
     e.preventDefault();
@@ -59,7 +75,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+          {navLinks.map((link) =>
             link.isRoute ? (
               <Link
                 key={link.name}
@@ -83,7 +99,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-gold transition-all duration-300 group-hover:w-full" />
               </button>
             )
-          ))}
+          )}
           <Button variant="hero" size="sm" onClick={onContactClick}>
             Get in Touch
           </Button>
@@ -91,7 +107,9 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
 
         {/* Mobile Menu Button */}
         <button
-          className={`md:hidden p-2 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`}
+          className={`md:hidden p-2 ${
+            isScrolled ? 'text-foreground' : 'text-primary-foreground'
+          }`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -105,7 +123,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
         }`}
       >
         <div className="flex flex-col items-center justify-center gap-8 pt-20">
-          {navLinks.map((link, index) => (
+          {navLinks.map((link, index) =>
             link.isRoute ? (
               <Link
                 key={link.name}
@@ -126,11 +144,15 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
                 {link.name}
               </button>
             )
-          ))}
-          <Button variant="hero" size="lg" onClick={() => {
-            onContactClick();
-            setIsMobileMenuOpen(false);
-          }}>
+          )}
+          <Button
+            variant="hero"
+            size="lg"
+            onClick={() => {
+              onContactClick();
+              setIsMobileMenuOpen(false);
+            }}
+          >
             Get in Touch
           </Button>
         </div>
