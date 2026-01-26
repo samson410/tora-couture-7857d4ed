@@ -91,7 +91,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
 
         {/* Mobile Menu Button */}
         <button
-          className={`md:hidden p-2 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`}
+          className={`md:hidden p-2 ${isScrolled ? 'text-foreground' : 'text-foreground'}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
