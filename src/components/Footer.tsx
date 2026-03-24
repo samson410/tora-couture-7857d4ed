@@ -101,6 +101,10 @@ const Footer = () => {
             <p className="text-secondary-foreground/60 text-sm">
               © {currentYear} Tora Couture. All rights reserved.
             </p>
+
+            <p>
+            Built by SamTech
+            </p>
             <p className="text-secondary-foreground/60 text-sm flex items-center gap-1">
               Made with <Heart size={14} className="text-primary" /> in Lagos, Nigeria
             </p>
