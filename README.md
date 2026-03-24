@@ -1,73 +1,60 @@
-# Welcome to your Lovable project
+Toras Couture
 
-## Project info
+Toras Couture is a modern fashion brand website developed by SamTech, designed to showcase the brand’s collections, highlight the designer’s identity, and provide a direct communication channel for clients.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+📌 Overview
 
-## How can I edit this code?
+This website serves as a digital presence for Toras Couture, presenting fashion pieces in a visually appealing catalog while allowing visitors to learn more about the designer and easily get in touch for inquiries or orders.
 
-There are several ways of editing your application.
+🚀 Features
+Fashion catalog display
+Designer profile section
+Contact form for client inquiries
+Clean and elegant user interface
+Fully responsive design
+🛠️ Tech Stack
+Vite
+TypeScript
+React
+Tailwind CSS
+shadcn/ui
+⚙️ Getting Started
 
-**Use Lovable**
+To run the project locally:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Navigate into the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
-```
+📁 Project Structure
+src/
+├── components/
+├── pages/
+├── assets/
+├── hooks/
+├── lib/
+└── App.tsx
+🌐 Deployment
 
-**Edit a file directly in GitHub**
+The project can be deployed using:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Vercel
+Netlify
 
-**Use GitHub Codespaces**
+To build for production:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+npm run build
+🎯 Purpose
 
-## What technologies are used for this project?
+The goal of this project is to provide Toras Couture with a strong online presence, improve brand visibility, and create an easy way for clients to explore designs and connect with the designer.
 
-This project is built with:
+👨‍💻 Author
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Developed and maintained by SamTech
