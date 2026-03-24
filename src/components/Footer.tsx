@@ -102,7 +102,7 @@ const Footer = () => {
               © {currentYear} Tora Couture. All rights reserved.
             </p>
 
-            <p>
+            <p className="text-secondary-foreground/60 text-sm>
             Built by SamTech
             </p>
             <p className="text-secondary-foreground/60 text-sm flex items-center gap-1">
