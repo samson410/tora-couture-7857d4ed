@@ -55,7 +55,7 @@ const About = () => {
                 <div className="absolute -inset-4 bg-gradient-primary rounded-3xl opacity-20 blur-2xl" />
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-elegant">
                   <img
-                    src="../public/images/ceo.jpg"
+                    src="/images/ceo.jpg"
                     alt="Bada Tolulope - CEO of Tora Couture"
                     className="w-full h-full object-cover"
                   />
