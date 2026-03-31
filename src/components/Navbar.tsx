@@ -45,14 +45,14 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-elegant py-3'
+          ? 'bg-background/95 shadow-elegant py-3' 
           : 'bg-transparent py-5'
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <span className="font-serif text-2xl md:text-3xl font-bold text-purple">
+          <span className="font-serif text-2xl md:text-3xl font-bold text-pink-900">
             Tora Couture
           </span>
         </Link>
