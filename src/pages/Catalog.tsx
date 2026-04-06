@@ -6,7 +6,8 @@ import ImageLightbox from '@/components/ImageLightbox';
 import ContactModal from '@/components/ContactModal';
 import { products } from '@/data/products';
 
-const categories = ['All', 'Corporate', 'Ankara', 'Corset'];
+
+const categories = ['All', 'Corporate', 'Ankara', 'Classy','Kaftan', 'Lace'];
 
 const Catalog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');

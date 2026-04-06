@@ -1,4 +1,5 @@
 import { Button } from './ui/button';
+import { Link } from "react-router-dom";
 
 interface HeroSectionProps {
   onContactClick: () => void;
@@ -45,14 +46,14 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
             >
               Contact Us
             </Button>
-            <Button 
-              variant="outline" 
-              size="xl"
-              className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground hover:text-secondary"
-              asChild
-            >
-              <a href="/catalog">View Collection</a>
-            </Button>
+         <Button
+            variant="outline"
+            size="xl"
+            className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground hover:text-secondary"
+            asChild
+          >
+            <Link to="/catalog">View Collection</Link>
+          </Button>
           </div>
         </div>
       </div>

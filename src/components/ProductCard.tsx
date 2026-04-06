@@ -5,7 +5,6 @@ import { Button } from './ui/button';
 interface Product {
   id: number;
   name: string;
-  price: string;
   image: string;
   category: string;
 }
@@ -26,7 +25,7 @@ const ProductCard = ({ product, onViewImage, onContactClick }: ProductCardProps)
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-1 group-hover:scale-110"
         />
         
         {/* Overlay Actions */}
@@ -71,9 +70,6 @@ const ProductCard = ({ product, onViewImage, onContactClick }: ProductCardProps)
         <h3 className="font-serif text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
           {product.name}
         </h3>
-        <p className="text-gold font-bold text-lg">
-          {product.price}
-        </p>
       </div>
     </div>
   );

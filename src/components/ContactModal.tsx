@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { X, Send, Phone, MapPin, Instagram } from 'lucide-react';
+import { X, Send, Phone, MapPin, Instagram, MessageCircle} from 'lucide-react';
 import { Button } from './ui/button';
 import { toast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
+import { SiTiktok } from 'react-icons/si';    
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -18,21 +20,40 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    await emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    );
+
     toast({
       title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you soon.",
+      description: "We'll get back to you soon.",
     });
-    
+
     setFormData({ name: '', email: '', phone: '', message: '' });
-    setIsSubmitting(false);
-    onClose();
-  };
+    onClose(); // closes modal after success
+  } catch (error) {
+    toast({
+      title: "Error!",
+      description: "Failed to send message. Try again.",
+      variant: "destructive",
+    });
+  }
+
+  setIsSubmitting(false);
+  
+};
 
   if (!isOpen) return null;
 
@@ -150,10 +171,17 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               <Phone size={18} />
               <span>08080610348</span>
             </a>
-            <div className="flex items-start gap-3 text-muted-foreground">
-              <MapPin size={18} className="mt-0.5 flex-shrink-0" />
-              <span>No. 32, Elbetel Street, Off Governor's Road, Ikotun, Lagos</span>
-            </div>
+
+            <a 
+               href="https://wa.me/2348080610348" 
+               target="_blank"
+               rel="noopener noreferrer"
+              className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+            >
+              <MessageCircle size={18} />
+              <span>Whatsapp</span>
+            </a>
+           
             <a 
               href="https://instagram.com/toras_couture" 
               target="_blank" 
@@ -163,6 +191,17 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               <Instagram size={18} />
               <span>@toras_couture</span>
             </a>
+            <a 
+              href="https://www.tiktok.com/@toras_couture?_r=1&_t=ZS-95K7iIkqFQD" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+            >
+              <SiTiktok size={20} />
+              <span>@toras_couture</span>
+            </a>
+
+            
           </div>
         </div>
       </div>

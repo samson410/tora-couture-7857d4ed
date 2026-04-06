@@ -60,10 +60,6 @@ const Footer = () => {
                 <Phone size={16} />
                 08080610348
               </a>
-              <div className="flex items-start gap-2 text-secondary-foreground/70">
-                <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>No. 32, Elbetel Street, Off Governor's Road, Ikotun, Lagos</span>
-              </div>
               <a 
                 href="https://instagram.com/toras_couture" 
                 target="_blank" 
@@ -83,13 +79,13 @@ const Footer = () => {
                 08080610348
               </a>
               <a 
-                href="https://tiktok.com/@your_handle" 
+                href="https://www.tiktok.com/@toras_couture?_r=1&_t=ZS-95K7iIkqFQD" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-secondary-foreground/70 hover:text-gold transition-colors"
               >
                 <SiTiktok size={16} />
-                @your_handle
+                @toras_couture
               </a>
             </div>
           </div>
@@ -103,7 +99,7 @@ const Footer = () => {
             </p>
 
             <p className="text-secondary-foreground/60 text-sm">
-            Built by SamTech
+            Website developed by <b>SamTech</b>
             </p>
             <p className="text-secondary-foreground/60 text-sm flex items-center gap-1">
               Made with <Heart size={14} className="text-primary" /> in Lagos, Nigeria
