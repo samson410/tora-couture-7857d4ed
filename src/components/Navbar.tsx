@@ -53,7 +53,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <span className="font-serif text-2xl md:text-3xl font-bold text-pink-900">
-            Tora Couture
+            Tora's Couture
           </span>
         </Link>
 

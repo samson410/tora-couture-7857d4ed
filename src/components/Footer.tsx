@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="font-serif text-2xl font-bold text-secondary-foreground mb-4">
-              Tora Couture
+              Tora's Couture
             </h3>
             <p className="text-secondary-foreground/70 leading-relaxed">
               Creating elegant fashion pieces that empower and inspire. 
@@ -95,7 +95,7 @@ const Footer = () => {
         <div className="border-t border-secondary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-secondary-foreground/60 text-sm">
-              © {currentYear} Tora Couture. All rights reserved.
+              © {currentYear} Tora's Couture. All rights reserved.
             </p>
 
             <p className="text-secondary-foreground/60 text-sm">

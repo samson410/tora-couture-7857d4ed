@@ -25,7 +25,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto space-y-8">
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground leading-tight animate-fade-up">
-            Tora Couture
+            Tora's Couture
           </h1>
           
           <p className="font-serif text-2xl md:text-4xl lg:text-5xl italic text-[hsl(51,100%,50%)] animate-fade-up [animation-delay:200ms]">
